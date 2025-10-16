@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+function initFAQ() {
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         item.addEventListener('toggle', function() {
@@ -11,5 +11,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+}
+
+document.addEventListener('DOMContentLoaded', initFAQ);
+
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        console.log('Page restored from bfcache');
+    }
+});
+
+window.addEventListener('pagehide', function(event) {
+    if (event.persisted) {
+        console.log('Page added to bfcache');
+    }
 });
 
