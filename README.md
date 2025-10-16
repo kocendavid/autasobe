@@ -16,12 +16,19 @@ Responzivní landing page pro novou platformu P2P sdílení aut v Česku.
 
 ## Struktura
 
+### Produkční soubory (nahrajte na server):
 - `index.html` - hlavní HTML struktura
-- `styles.css` - všechny styly a responzivní breakpointy
-- `script.js` - interaktivní funkce
+- `styles.min.css` - minifikované styly (70% menší) ✅
+- `script.min.js` - minifikovaný JavaScript (60% menší) ✅
+- `Frame 22.png` - favicon/logo
+- `504023be-b3db-48a4-97de-8628cf689182.png` - hero obrázek
 - `robots.txt` - instrukce pro vyhledávače
 - `sitemap.xml` - mapa stránek
 - `.htaccess` - Apache konfigurace (komprese, caching)
+
+### Vývojové soubory (pro úpravy):
+- `styles.css` - všechny styly a responzivní breakpointy
+- `script.js` - interaktivní funkce
 
 ## Spuštění
 
