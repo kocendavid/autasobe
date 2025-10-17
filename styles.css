@@ -141,7 +141,7 @@ body {
     border: none;
     cursor: pointer;
     text-align: center;
-    width: 100%;
+    white-space: nowrap;
 }
 
 .btn-primary {
@@ -368,6 +368,66 @@ section h2 {
     line-height: 1.8;
 }
 
+/* Waitlist form */
+.waitlist-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+    align-items: stretch;
+}
+
+.waitlist-input {
+    min-width: 200px;
+    padding: 14px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    width: 300px;
+}
+
+.waitlist-input::placeholder {
+    color: var(--primary-color);
+    opacity: 0.7;
+}
+
+.waitlist-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(8, 96, 95, 0.15);
+}
+
+.waitlist-button {
+    flex: 0 0 auto;
+    padding: 14px 24px;
+}
+
+.waitlist-message {
+    margin-top: 8px;
+    font-size: 0.938rem;
+    width: 100%;
+}
+
+.cta-group .waitlist-form {
+    max-width: 100%;
+}
+
+.inline-cta .waitlist-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .waitlist-input {
+        flex: 1 1 100%;
+    }
+    
+    .waitlist-button {
+        flex: 1 1 100%;
+    }
+}
+
 .faq {
     background-color: var(--secondary-color);
 }
@@ -470,7 +530,6 @@ section h2 {
 
     .btn {
         width: 100%;
-        max-width: 400px;
     }
 }
 
